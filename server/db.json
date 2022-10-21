@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "title": "Go Running",
+      "frquency": 3,
+      "imageURL" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcqvj-uBKS9i6uMmSiAE8wvNZw8Qr8LO-hw&usqp=CAU"
+    },
+    {
+      "id": 2,
+      "title": "Drink A Gallon of Water",
+      "frequency": 4,
+      "imageURL" : "https://cdn.shopify.com/s/files/1/0375/3269/6635/products/B2B_Web_PNG-The-IceFlow-Flip-Straw-Tumbler-30OZ-Lavender-Front_1800x1800.png?v=1665512279"
+    },
+    {
+      "id": 3,
+      "title": "Make the Bed",
+      "frequency": 5,
+      "imageURL" : "https://assets.weimgs.com/weimgs/ab/images/wcm/products/202241/0019/mid-century-bed-c.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Eat Breakfast",
+      "frequency": 3,
+      "imageURL" : "https://images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Do a Hair Mask",
+      "frequency": 4,
+      "imageURL" : "https://media.ulta.com/i/ulta/2257269?w=720"
+    }
+  ]

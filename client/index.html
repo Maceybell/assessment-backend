@@ -2,12 +2,95 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
-    <button id="complimentButton">Get a compliment</button>
+    <nav><button id="complimentButton">Get a compliment</button>
+    <button id ="fortuneButton">Receive your fortune</button></nav>
+
+    <br>
+
+    <header>
+      <h1>Goals</h1>
+  </header>
+  <main>
+
+  <form>
+      <input 
+          type='text'
+          id="title"
+          placeholder="What's the goal?"/>
+      <input 
+          type='text'
+          id="img"
+          placeholder='Paste an image URL'/>
+      <section id="frequency-container">
+          <p>Times Per Week:</p>
+          <div id="radio-container">
+              <label for="one">
+                  <input
+                      type="radio"
+                      name="frequencies"
+                      value="1"
+                      id="one"/>
+                  1
+              </label>
+              <label for="two">
+                  <input
+                      type="radio"
+                      name="frequencies"
+                      value="2"
+                      id="two"/>
+                  2
+              </label>
+              <label for="three">
+                  <input
+                      type="radio"
+                      name="frequencies"
+                      value="3"
+                      id="three"/>
+                  3
+              </label>
+              <label for="four">
+                  <input
+                      type="radio"
+                      name="frequencies"
+                      value="4"
+                      id="four"/>
+                  4
+              </label>
+              <label for="five">
+                  <input
+                      type="radio"
+                      name="frequencies"
+                      value="5"
+                      id="five"/>
+                  5
+              </label>
+          </div>
+      </section>
+      <button>add goal</button>
+  </form>
+
+  <section id="movies-container"></section>
+
+  </main>
+  
+
+
+
+
+
+
+
+
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
+
+  
     
+
+
   </body>
 </html>
