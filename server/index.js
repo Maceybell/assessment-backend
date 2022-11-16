@@ -9,22 +9,21 @@ app.use(express.json());
 
 const { getCompliment } = require('./controller.js')
 const { getFortune } = require('./controller.js')
-const {
-    getMovies,
-    deleteMovie, 
-    createMovie, 
-    updateMovie
+const { 
+    getGoals,
+    deleteGoal,
+    updateGoal
+   
 } = require('./controller')
 
-app.get(`/api/movies`, getMovies)
-app.delete(`/api/movies/:id`, deleteMovie)
-app.post(`/api/movies`, createMovie)
-app.put(`/api/movies/:id`, updateMovie)
 
 
 
+app.get("/api/goals", getGoals)
 app.get("/api/compliment", getCompliment);
-app.get("/api/fortune", getFortune)
+app.get("/api/fortune", getFortune);
+app.delete('/api/goals/:id', deleteGoal)
+app.put("/api/goals/:id", updateGoal)
 
 
 

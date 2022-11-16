@@ -1,6 +1,6 @@
 
-const movies = require('./db.json')
-let globalId = 11
+const goals = require('./db.json')
+
 
 module.exports = {
 
@@ -24,40 +24,32 @@ module.exports = {
         res.status(200).send(randomFortunes);
     },
 
-    getMovies: (req, res) => res.status(200).send(movies),
-    deleteMovie: (req, res) => {
-        let index = movies.findIndex(elem => elem.id === +req.params.id)
-        movies.splice(index, 1)
-        res.status(200).send(movies)
+    getGoals: (req, res) => {
+        console.log(goals)
+        res.status(200).send(goals)
     },
-    createMovie: (req, res) => {
-        let { title, rating, imageURL } = req.body
-        let newMovie = {
-            id: globalId,
-            title, 
-            rating,
-            imageURL
-        }
-        movies.push(newMovie)
-        res.status(200).send(movies)
-        globalId++
-    },
-    updateMovie: (req, res) => {
+
+    deleteGoal: (req, res) => {
+        let index = goals.findIndex(elem => elem.id === +req.params.id)
+        console.log(index)
+        console.log(goals)
+        goals.splice(index, 1)
+        console.log(goals)
+        res.status(200).send(goals)
+
+    }, updateGoal: (req, res) => {
         let { id } = req.params
         let { type } = req.body
-        let index = movies.findIndex(elem => +elem.id === +id)
-
-        if (movies[index].rating === 5 && type === 'plus') {
-            res.status(400).send('cannot go above 5')
-        } else if (movies[index].rating === 0 && type === 'minus') {
-            res.status(400).send('cannot go below 0')
-        } else if (type === 'plus') {
-            movies[index].rating++
-            res.status(200).send(movies)
+        let index = goals.findIndex(elem => +elem.id === +id)
+        if (type === 'plus'){
+            goals[index].frequency++
+            res.status(200).send(goals)
         } else if (type === 'minus') {
-            movies[index].rating--
-            res.status(200).send(movies)
+            goals[index].frequency--
+            res.status(200).send(goals)
         } else {
             res.sendStatus(400)
         }
-    } }
+    }
+
+     }
